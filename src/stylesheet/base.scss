@@ -1,0 +1,24 @@
+@import './fonts.scss';
+@import './vars.scss';
+
+* {
+  box-sizing: border-box;
+}
+html {
+  background-color: #37383A;
+  body {
+    margin: 0;
+    padding: 0;
+    font-size: 1.5em;
+    ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    a {
+      text-decoration: none;
+    }
+    h1, h2, h3, h4, h5, h6, p {
+      margin: .25em 0;
+    }
+  }
+}
