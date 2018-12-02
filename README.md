@@ -14,6 +14,9 @@ I want to create a lightweight application for the reason of upgrading my skills
 
 * **Jest** + **Enzyme** for writing tests
 
+Misc:
+* SCSS
+
 ## Available Scripts
 
 In the project directory, you can run:
