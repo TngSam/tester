@@ -6,6 +6,8 @@ import Footer from './Footer/Footer';
 
 import 'stylesheet/base.scss';
 
+import RoutesProvider from 'components/base/RoutesProvider/RoutesProvider';
+
 /**
  * Implements a global layout
  * @class
@@ -17,7 +19,7 @@ class Layout extends Component {
       <section>
         <Header/>
         <Container>
-          Hello World!
+          <RoutesProvider/>
         </Container>
         <Footer/>
       </section>
