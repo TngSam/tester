@@ -5,11 +5,7 @@ import * as serviceWorker from './serviceWorker';
 
 import { BrowserRouter as Router } from 'react-router-dom';
 
-import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserCircle, faEllipsisV, faQuestion } from '@fortawesome/free-solid-svg-icons';
-library.add(faUserCircle);
-library.add(faEllipsisV);
-library.add(faQuestion);
+import './setupIcons';
 
 ReactDOM.render(<Router><Layout /></Router>, document.getElementById('root'));
 

@@ -76,6 +76,7 @@
     "not op_mini all"
   ],
   "devDependencies": {
+    "casual-browserify": "^1.5.19-2",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
     "jest-styled-components": "^6.3.1",

@@ -41,7 +41,11 @@ class Header extends Component {
   }
   componentDidMount () {
     // Set current pathname as active in the navigation
-    const activeLinkName = findObjByProp(this.state.nav.links, 'to', window.location.pathname).name;
+    let pathname = '/';
+    if (window && window.location && window.location.pathname) {
+      pathname = window.location.pathname;
+    }
+    const activeLinkName = findObjByProp(this.state.nav.links, 'to', pathname).name;
     this.setActiveLink(activeLinkName);
   }
   constructor () {
