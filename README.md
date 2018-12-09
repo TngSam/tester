@@ -9,6 +9,7 @@ I want to create a lightweight application for the reason of upgrading my skills
 * **React** as a front-end basis
 
    * *styled-components*
+   * *react-router*
 
 * **Express** + **MongoDB** as a back-end basis
 
@@ -16,6 +17,7 @@ I want to create a lightweight application for the reason of upgrading my skills
 
 Misc:
 * SCSS
+* Ramda
 
 ## Available Scripts
 
