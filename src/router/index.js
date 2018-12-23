@@ -1,3 +1,5 @@
+// Exports router config
+
 // Route /
 import Index from 'views/Index/Index';
 

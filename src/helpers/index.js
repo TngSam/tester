@@ -1,5 +1,7 @@
 import * as R from 'ramda';
 
+// Implements a helpers kit for easier work with data
+
 // Find a needed object in the array by property equality
 export const findObjByProp = (array, prop, value) => {
   if (!Array.isArray(array)) {
