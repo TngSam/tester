@@ -1,40 +1,43 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
-import styled, { css } from 'styled-components';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'; // eslint-disable-line no-unused-vars
+import { FaUserCircle, FaNewspaper } from 'react-icons/fa';
+import styled from 'styled-components';
 
-const StyledNav = styled.ul`
-  position: absolute;
-  top: 199%;
-  left: 50%;
-  transform: translate(-45.25%, -50%);
-  overflow: hidden;
-  width: 15em;
-  height: 5.5em;
-  transition: width .75s, height .75s;
-  ${props => props.visible && css`
-    width: 0;
-    height: 0;
-    transition-delay: 1s;
-  `}
+const StyledNav = styled.nav`
+  min-width: 12.5%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`;
+const StyledLink = styled(Link)`
+  display: block;
+  padding: 10% 10% 7.5% 10%;
+  border-radius: 3px;
+  transition: background 0.35s ease;
+  &:hover {
+    background: rgba(0, 0, 0, 0.075);
+  }
 `;
 
 /**
  * Component that builds up a circular navigation
  * @class
- * @prop {bool} visible - A visibility of navigation
  * @author Samir Amirseidov <famirseidov@gmail.com>
  */
 class Nav extends Component {
   render () {
     return (
-      <StyledNav visible={this.props.visible}>
-        {this.props.children}
+      <StyledNav>
+        <StyledLink to="/">
+          <FaNewspaper size={32} color="#3F51B5"/>
+        </StyledLink>
+        <StyledLink to="/cabinet">
+          <FaUserCircle size={30} color="#3F51B5"/>
+        </StyledLink>
       </StyledNav>
     );
   }
-};
-Nav.propTypes = {
-  visible: PropTypes.bool
 };
 
 export default Nav;

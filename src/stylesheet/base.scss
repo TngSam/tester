@@ -5,11 +5,9 @@
   box-sizing: border-box;
 }
 html {
-  background-color: #37383A;
   body {
     margin: 0;
-    padding: 0;
-    font-family: 'Quicksand', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 1.5em;
     ul {
       list-style-type: none;
@@ -18,7 +16,7 @@ html {
     }
     a {
       text-decoration: none;
-      color: white;
+      color: black;
     }
     h1, h2, h3, h4, h5, h6, p {
       margin: .25em 0;
