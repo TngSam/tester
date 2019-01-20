@@ -1,11 +1,11 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Link, Switch } from 'react-router-dom'; // eslint-disable-line no-unused-vars
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'; // eslint-disable-line no-unused-vars
 
-import routerConfig from 'router/index';
+import routerConfig from 'router';
+import NotFound from 'views/NotFound/NotFound';
 
 /**
  * Impelements routes provider which exports routes that contain related views
- * @returns {XML}
  * @author Samir Amirseidov <famirseidov@gmail.com>
  */
 export default function RoutesProvider () {
@@ -19,6 +19,7 @@ export default function RoutesProvider () {
           key={i}
         />);
       })}
+      <Route component={NotFound}/>
     </Switch>
   );
 }
