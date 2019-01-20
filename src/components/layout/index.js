@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styled from 'styled-components';
 
 import Header from './Header/Header';
 import Container from './Container/Container';
@@ -6,25 +7,25 @@ import Footer from './Footer/Footer';
 
 import 'stylesheet/base.scss';
 
-import RoutesProvider from 'components/base/RoutesProvider/RoutesProvider';
+const StyledLayout = styled.section`
+  padding: 0 20%;
+`;
 
 /**
- * Implements a global layout
- * @class
+ * Higher-order component which wraps a component into the global layout
+ * @function
  * @author Samir Amirseidov <famirseidov@gmail.com>
  */
-class Layout extends Component {
+export const withLayout = WrappedComponent => class extends Component {
   render() {
     return (
-      <section>
+      <StyledLayout>
         <Header/>
         <Container>
-          <RoutesProvider/>
+          <WrappedComponent/>
         </Container>
         <Footer/>
-      </section>
+      </StyledLayout>
     );
   }
 }
-
-export default Layout;
