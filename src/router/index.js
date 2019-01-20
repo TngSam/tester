@@ -9,10 +9,18 @@ import About from 'views/About/About';
 // Route /cabinet
 import Cabinet from 'views/Cabinet/Cabinet';
 
+// Route /auth
+import Auth from 'views/Auth/Auth';
+
 export default [
   {
     path: '/',
     view: Index,
+    exact: true
+  },
+  {
+    path: '/auth',
+    view: Auth,
     exact: true
   },
   {
