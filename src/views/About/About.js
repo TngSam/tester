@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import withLayout from 'components/layout';
+
 const Wrapper = styled.section`
   padding: 10px;
 `;
 const Heading = styled.h1`
   text-align: center;
-  color: white;
 `;
 
 class About extends Component {
@@ -19,4 +20,4 @@ class About extends Component {
   }
 }
 
-export default About;
+export default withLayout(About);

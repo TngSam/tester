@@ -7,7 +7,7 @@ import Footer from './Footer/Footer';
 
 import 'stylesheet/base.scss';
 
-const StyledLayout = styled.section`
+const StyledLayout = styled.div`
   padding: 0 20%;
 `;
 
@@ -16,7 +16,7 @@ const StyledLayout = styled.section`
  * @function
  * @author Samir Amirseidov <famirseidov@gmail.com>
  */
-export const withLayout = WrappedComponent => class extends Component {
+const withLayout = WrappedComponent => class extends Component {
   render() {
     return (
       <StyledLayout>
@@ -29,3 +29,5 @@ export const withLayout = WrappedComponent => class extends Component {
     );
   }
 }
+
+export default withLayout;

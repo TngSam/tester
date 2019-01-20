@@ -1,12 +1,13 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
 
+import withLayout from 'components/layout';
+
 const Wrapper = styled.section`
   padding: 10px;
 `;
 const Heading = styled.h1`
   text-align: center;
-  color: white;
 `;
 
 class Cabinet extends Component {
@@ -19,4 +20,4 @@ class Cabinet extends Component {
   }
 }
 
-export default Cabinet;
+export default withLayout(Cabinet);
