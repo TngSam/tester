@@ -20,7 +20,7 @@ class Footer extends Component {
   render () {
     return (
       <StyledFooter>
-        <Copyright>&copy; 2019</Copyright>
+        <Copyright>&copy; 2019 Tester. All rights reserved</Copyright>
       </StyledFooter>
     );
   }
