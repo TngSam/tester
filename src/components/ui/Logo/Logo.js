@@ -3,6 +3,7 @@ import styled from 'styled-components';
 
 const Logo = styled.h1`
   font-family: 'Quicksand', Helvetica Neue;
+  font-size: 1.75em;
   margin: 0;
 `;
 
@@ -11,4 +12,4 @@ const Logo = styled.h1`
  * @function
  * @author Samir Amirseidov <famirseidov@gmail.com>
  */
-export default () => (<Logo>Tester</Logo>);
+export default () => (<Logo>TestifyMe</Logo>);
