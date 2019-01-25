@@ -10,7 +10,7 @@ import About from 'views/About/About';
 import Cabinet from 'views/Cabinet/Cabinet';
 
 // Route /auth
-import Auth from 'views/Auth/Auth';
+import Auth from 'containers/Auth/Auth';
 
 export default [
   {
