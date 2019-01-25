@@ -1,10 +1,9 @@
-import { LOGIN } from 'store/actions/actionTypes';
+import { LOGIN, REGISTER } from 'store/actions/actionTypes';
 
 const initialState = {
-  nickname: '',
-  password: '',
   isFetching: false,
-  isError: false
+  success: false,
+  error: null
 };
 
 const authReducer = (state = initialState, action) => {
@@ -15,13 +14,32 @@ const authReducer = (state = initialState, action) => {
       });
     case LOGIN.SUCCESS:
       return Object.assign({}, state, {
-        ...action.payload,
-        isFetching: false
+        isFetching: false,
+        success: true
       });
     case LOGIN.ERROR:
       return Object.assign({}, state, {
-        isError: true
+        isFetching: false,
+        success: false,
+        error: action.payload
       });
+
+    case REGISTER.REQUEST:
+      return Object.assign({}, state, {
+        isFetching: true
+      });
+    case REGISTER.SUCCESS:
+      return Object.assign({}, state, {
+        isFetching: false,
+        success: true
+      });
+    case REGISTER.ERROR:
+      return Object.assign({}, state, {
+        isFetching: false,
+        success: false,
+        error: action.payload
+      });
+
     default:
       return state;
   }
