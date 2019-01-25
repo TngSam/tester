@@ -1,28 +1,33 @@
-import { call, take, put } from 'redux-saga/effects';
-import api from 'api';
+import { takeLatest, put } from 'redux-saga/effects';
+import request from 'store/sagaRequestHandler';
 
-import { loginRequest, loginError, loginSuccess } from 'store/actions';
-import { LOGIN, LOGOUT } from 'store/actions/actionTypes';
+import {
+  loginError, loginSuccess,
+  registerError, registerSuccess
+} from 'store/actions';
+import { LOGIN, LOGOUT, REGISTER } from 'store/actions/actionTypes';
 
-function* login (action) {
-  const payload = action.payload;
-
-  try {
-    yield put(loginRequest(payload));
-    const data = yield call(api.post, 'login', payload);
-    yield put(loginSuccess(data));
-  } catch (e) {
-    yield put(loginError(e));
-  }
-};
-
-function* logout (action) {
-  const payload = action.payload;
+function* onLogout (action) {
+  yield put({ type: LOGOUT });
 }
 
 function* authSaga () {
-  yield take(LOGIN.REQUEST, login);
-  yield take(LOGOUT, logout);
+  yield takeLatest(LOGIN.REQUEST, request({
+    url: 'login',
+    dispatcher: {
+      error: loginError,
+      success: loginSuccess
+    }
+  }));
+  yield takeLatest(LOGOUT, onLogout);
+
+  yield takeLatest(REGISTER.REQUEST, request({
+    url: 'register',
+    dispatcher: {
+      error: registerError,
+      success: registerSuccess
+    }
+  }));
 }
 
 export default authSaga;
