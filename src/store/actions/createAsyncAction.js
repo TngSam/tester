@@ -1,3 +1,9 @@
+/**
+ * Create async actions template for Redux
+ * @param action
+ * @returns {{REQUEST: string, ERROR: string, SUCCESS: string}}
+ * @author Samir Amirseidov <famirseidov@gmail.com>
+ */
 const createAsyncAction = (action) => {
   return {
     REQUEST: `${action}_REQUEST`,
