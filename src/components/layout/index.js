@@ -5,8 +5,6 @@ import Header from './Header/Header';
 import Container from './Container/Container';
 import Footer from './Footer/Footer';
 
-import 'stylesheet/base.scss';
-
 const StyledLayout = styled.div`
   padding: 0 20%;
 `;
