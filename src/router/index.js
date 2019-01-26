@@ -1,16 +1,18 @@
+import { lazy } from 'react';
+
 // Exports router config
 
 // Route /
-import Index from 'views/Index/Index';
+const Index = lazy(() => import('views/Index/Index'));
 
 // Route /about
-import About from 'views/About/About';
+const About = lazy(() => import('views/About/About'));
 
 // Route /cabinet
-import Cabinet from 'views/Cabinet/Cabinet';
+const Cabinet = lazy(() => import('views/Cabinet/Cabinet'));
 
 // Route /auth
-import Auth from 'containers/Auth/Auth';
+const Auth = lazy(() => import('containers/Auth/Auth'));
 
 export default [
   {
