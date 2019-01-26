@@ -16,3 +16,6 @@ export const findObjByProp = (array, prop, value) => {
 
   return R.find(R.propEq(prop, value))(array);
 }
+
+// Less verbose implementation of Object.assign
+export const assign = (temp = {}, assignee = {}) => R.mergeDeepRight(temp, assignee);
