@@ -143,15 +143,13 @@ class Auth extends Component {
                 <Field
                   name="password"
                   render={({ field }) => (
-                    <div>
-                      <TextField
-                        type="password"
-                        className={classes.textField}
-                        label={errors.password && touched.password ? errors.password : "Password"}
-                        error={errors.password && touched.password}
-                        {...field}
-                      />
-                    </div>
+                    <TextField
+                      type="password"
+                      className={classes.textField}
+                      label={errors.password && touched.password ? errors.password : "Password"}
+                      error={errors.password && touched.password}
+                      {...field}
+                    />
                   )}
                 />
                 {this.state.formType === 'register' && (
