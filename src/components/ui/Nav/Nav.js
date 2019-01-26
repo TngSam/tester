@@ -12,6 +12,7 @@ const StyledNav = styled.nav`
 `;
 const StyledLink = styled(Link)`
   display: block;
+  width: fit-content;
   padding: 10% 10% 7.5% 10%;
   border-radius: 3px;
   transition: background 0.35s ease;
