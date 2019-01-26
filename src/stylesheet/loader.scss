@@ -1,0 +1,14 @@
+@import './vars.scss';
+@import './mixins.scss';
+
+$primary-color: $blue;
+$optimal-height: 97.5vh;
+
+@import 'loaders.css/src/animations/line-scale.scss';
+.component-wrapper {
+  height: $optimal-height;
+  @include center;
+
+  .loader-hidden { display: none; }
+  .loader-active { display: block; }
+}
