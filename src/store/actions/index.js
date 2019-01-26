@@ -1,4 +1,4 @@
-import { LOGIN, REGISTER } from './actionTypes';
+import { LOGIN, REGISTER, STORE_TOKEN } from './actionTypes';
 
 export const loginRequest = payload => ({
   type: LOGIN.REQUEST,
@@ -25,5 +25,10 @@ export const registerError = payload => ({
 });
 export const registerSuccess = payload => ({
   type: REGISTER.SUCCESS,
+  payload
+});
+
+export const storeToken = payload => ({
+  type: STORE_TOKEN,
   payload
 });

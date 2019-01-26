@@ -1,43 +1,52 @@
-import { LOGIN, REGISTER } from 'store/actions/actionTypes';
+import { assign } from 'helpers';
+import { LOGIN, REGISTER, STORE_TOKEN } from 'store/actions/actionTypes';
 
 const initialState = {
   isFetching: false,
   success: false,
-  error: null
+  error: null,
+  token: null
 };
 
 const authReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOGIN.REQUEST:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: true
       });
     case LOGIN.SUCCESS:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: false,
-        success: true
+        success: true,
+        token: action.payload.token
       });
     case LOGIN.ERROR:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: false,
         success: false,
         error: action.payload
       });
 
     case REGISTER.REQUEST:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: true
       });
     case REGISTER.SUCCESS:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: false,
-        success: true
+        success: true,
+        token: action.payload.token
       });
     case REGISTER.ERROR:
-      return Object.assign({}, state, {
+      return assign(state, {
         isFetching: false,
         success: false,
         error: action.payload
+      });
+
+    case STORE_TOKEN:
+      return assign(state, {
+        token: action.payload
       });
 
     default:
