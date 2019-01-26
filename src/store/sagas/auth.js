@@ -11,7 +11,7 @@ function* onLogout (action) {
   yield put({ type: LOGOUT });
 }
 
-function* authSaga () {
+export default function* authSaga () {
   yield takeLatest(LOGIN.REQUEST, request({
     url: 'login',
     dispatcher: {
@@ -29,5 +29,3 @@ function* authSaga () {
     }
   }));
 }
-
-export default authSaga;
